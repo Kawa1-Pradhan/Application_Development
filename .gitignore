@@ -1,0 +1,30 @@
+# Ignore build folders
+bin/
+obj/
+
+# Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore Visual Studio and VS Code folders
+.vs/
+.vscode/
+
+# Ignore temporary files
+*.tmp
+*.log
+
+# Ignore backup and cache
+*.bak
+*.cache
+
+# Ignore system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Ignore test and publish folders
+TestResults/
+*.publish.xml
