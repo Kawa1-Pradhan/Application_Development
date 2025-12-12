@@ -1,0 +1,31 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">Week7</a>
+    </div>
+</div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="flex-column">
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="/">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Intro
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="profile">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Profile
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="monkeys">
+                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Monkeys
+            </NavLink>
+        </div>
+
+    </nav>
+</div>

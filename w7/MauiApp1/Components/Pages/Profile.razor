@@ -1,0 +1,21 @@
+﻿@page "/profile"
+
+<h2 style="text-align:center; margin-top:20px;">Student Profile</h2>
+
+<div style="text-align:center; margin-top:20px;">
+    <img src="@photoPath" alt="Student Photo"
+         style="width:200px; height:200px; border-radius:50%; object-fit:cover;" />
+</div>
+
+<div style="text-align:center; margin-top:15px; font-size:18px;">
+    <p><strong>Name:</strong> @studentName</p>
+    <p><strong>Course:</strong> @courseName</p>
+    <p><strong>Batch Year:</strong> @batchYear</p>
+</div>
+
+@code {
+    string photoPath = "images/student1.jpg";
+    string studentName = "Kawal Pradhan";
+    string courseName = "Full Stack Web Development";
+    string batchYear = "2024";
+}

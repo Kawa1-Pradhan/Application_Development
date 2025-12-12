@@ -1,0 +1,52 @@
+@page "/monkeys"
+
+<h2 style="text-align:center; margin-top:20px;">Monkey List</h2>
+
+@if (monkeys.Count == 0)
+{
+    <p style="text-align:center; margin-top:20px;">No monkeys found</p>
+}
+else
+{
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:20px;">
+        @foreach (var monkey in monkeys)
+        {
+            <div style="width:250px; border:1px solid #ccc; border-radius:10px; padding:10px; text-align:center; box-shadow: 2px 2px 6px rgba(0,0,0,0.1);">
+                <img src="@monkey.Image" alt="@monkey.Name"
+                     style="width:200px; height:200px; object-fit:cover; border-radius:10px;" />
+                <h4 style="margin-top:10px;">@monkey.Name</h4>
+                <p>@monkey.Location</p>
+            </div>
+        }
+    </div>
+}
+
+@code {
+    public class Monkey
+    {
+        public string Name { get; set; }
+        public string Location { get; set; }
+        public string Image { get; set; }
+        public string Details { get; set; }
+        public int Population { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+    }
+
+    List<Monkey> monkeys = new List<Monkey>
+    {
+        new Monkey { Name = "Baboon", Location = "Africa & Asia", Image = "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/baboon.jpg" },
+        new Monkey { Name = "Capuchin Monkey", Location = "Central & South America", Image = "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/capuchin.jpg" },
+        new Monkey { Name = "Blue Monkey", Location = "Central and East Africa", Image = "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/bluemonkey.jpg" },
+        new Monkey { Name = "Squirrel Monkey", Location = "Central & South America", Image = "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/saimiri.jpg" },
+        new Monkey { Name = "Golden Lion Tamarin", Location = "Brazil", Image = "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/tamarin.jpg" },
+        new Monkey { Name = "Howler Monkey", Location = "South America", Image = "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/alouatta.jpg" },
+        new Monkey { Name = "Japanese Macaque", Location = "Japan", Image = "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/macasa.jpg" },
+        new Monkey { Name = "Mandrill", Location = "Southern Cameroon, Gabon, and Congo", Image = "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/mandrill.jpg" },
+        new Monkey { Name = "Proboscis Monkey", Location = "Borneo", Image = "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/borneo.jpg" },
+        new Monkey { Name = "Sebastian", Location = "Seattle", Image = "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/sebastian.jpg" },
+        new Monkey { Name = "Henry", Location = "Phoenix", Image = "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/henry.jpg" },
+        new Monkey { Name = "Red-shanked douc", Location = "Vietnam", Image = "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/douc.jpg" },
+        new Monkey { Name = "Mooch", Location = "Seattle", Image = "https://raw.githubusercontent.com/jamesmontemagno/app-monkeys/master/Mooch.PNG" },
+    };
+}
